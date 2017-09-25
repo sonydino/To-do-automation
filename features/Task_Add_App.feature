@@ -2,8 +2,8 @@ Feature: Add Task Button
 
   Scenario: Verify the Add task page
     Given I'm on Add task page
-    Then the page should have Title text box
-    And page should have Add button
+#    Then the page should have Title text box
+#    And page should have Add button
 
 
 #  Scenario: Add Task and verify the task
@@ -14,6 +14,7 @@ Feature: Add Task Button
 #    Then The task should be viewed on the page
 
     Scenario: Add and Delete the task and then verify
+      Given I click on Add button without Title field filled
       Given I create task with Title "Task1" and priority "High"
       Given I create task with Title "Task12" and priority "Low"
       Given I create task with Title "Task123" and priority "Medium"
